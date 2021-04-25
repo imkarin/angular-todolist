@@ -11,12 +11,11 @@ export class TodoItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   // Set classes dynamically
   setClasses() {
-    let classes = {
+    const classes = {
       todo: true,
       'is-completed': this.todo.completed
     }
@@ -24,4 +23,8 @@ export class TodoItemComponent implements OnInit {
     return classes
   }
 
+  // Event listener on checkbox toggle
+  onToggle(todo: Todo) {
+    this.todo.completed = !todo.completed;
+  }
 }

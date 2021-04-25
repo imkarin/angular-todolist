@@ -15,18 +15,18 @@ export class TodosComponent implements OnInit {
     this.todos = [
       {
         id: 1,
-        title: 'Todo One',
+        title: 'Do groceries',
         completed: false
       },
       {
         id: 2,
-        title: 'Todo Two',
+        title: 'Watch movie',
         completed: false
       },
       {
         id: 3,
-        title: 'Todo Three',
-        completed: true
+        title: 'Work on project',
+        completed: false
       }
     ]
   }

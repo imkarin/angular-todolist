@@ -1,4 +1,8 @@
 .todo {
+    p {
+        display: inline;
+    }
+
     &.is-completed {
         p {
             text-decoration: line-through;
