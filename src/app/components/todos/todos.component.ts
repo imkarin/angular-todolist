@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Todo } from '../../models/Todo';
 import { TodoService } from '../../services/todo.service'
 
@@ -16,5 +16,9 @@ export class TodosComponent implements OnInit {
     this.todoService.getTodos().subscribe(todos => {
       this.todos = todos;
     })
+  }
+
+  deleteTodo(todo: Todo) {
+    console.log('deleted')
   }
 }
