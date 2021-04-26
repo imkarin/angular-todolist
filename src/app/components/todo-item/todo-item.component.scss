@@ -1,7 +1,21 @@
 .todo {
+    padding-left: 8px;
+    position: relative;
+
     p {
         display: inline;
+        line-height: 1.8em;
+        margin-left: 8px;
     }
+
+    .delete {
+        position: absolute;
+        right: 0;
+        padding-right: 8px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    } 
 
     &.is-completed {
         p {
