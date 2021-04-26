@@ -24,13 +24,16 @@ export class TodoService {
   }
 
   // Toggle completed
-  toggleCompleted(todo: Todo): Observable<any> {
+  toggleCompleted(todo: Todo): Observable<any> { 
     const url = `${this.todosUrl}/${todo.id}`;
     return this.http.put(url, todo, httpOptions);
   }
 
   // Delete todos
-
+  deleteTodo(todo: Todo): Observable<Todo> {
+    const url = `${this.todosUrl}/${todo.id}`;
+    return this.http.delete<Todo>(url, httpOptions);
+  }
 
   // Add todos
 }
